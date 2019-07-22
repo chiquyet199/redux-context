@@ -1,0 +1,94 @@
+/* Animation */
+@keyframes imgHover-btn{
+  from {
+    display: none;
+    bottom: 0px;
+  }
+  to {
+    display: block;
+    bottom: 22px;
+  }
+}
+
+@keyframes imgHover{
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+.product {
+  border-radius: 3px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 0 none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+  margin: 10px;
+  width: 150px;
+}
+
+.imgContainer{
+  position: relative;
+}
+
+.imgContainer>.btn{
+  display: none;
+  height: 45px;
+
+  position: absolute;
+  bottom: 0px;
+  
+  background-color: rgb(41, 143, 41);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  
+  transition: background-color 0.12s linear;
+  animation-name: imgHover-btn;
+  animation-duration: 1s;
+  font-size: 13px;
+}
+
+.imgContainer>.btn:hover{
+  background-color: rgb(44, 180, 44);
+  box-shadow: 0px 0px 5px 1px rgb(177, 177, 177);
+}
+
+.product:hover .btn{
+
+  display: block;
+  animation: imgHover-btn 0.3s;
+  bottom: 30px;
+}
+
+.imgContainer:hover>img{
+  opacity: 0.5;
+  animation: imgHover 0.6s;
+}
+
+.product-item {
+  background: seashell;
+  padding: 15px 10px;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.product-item span {
+  flex: 0.2;
+}
+.product-item:hover {
+  cursor: pointer;
+}
+h3{
+  text-align: center;
+  font-size: 15px;
+}
+
+.productImg{
+  width: 100%;
+}
